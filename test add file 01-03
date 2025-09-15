@@ -17,6 +17,8 @@ git branch -d ten_nhanh_can_xoa ( lu y neu dang o nhanh do thi phai chuyen sang 
 #xoa tren git: git push origin --delete ten_nhanh_can_xoa
 kiemtra lai danh sach nhanh: git branch -a
 .
+
+sửa thử ở đây
 3. Pull Request (PR) + Code Review
 
 👉 Cơ chế trên GitHub/GitLab/Bitbucket để xin merge nhánh vào nhánh chính (thường là develop hoặc main).
