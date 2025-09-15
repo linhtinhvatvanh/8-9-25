@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace SchoolManagement
+{
+    public class Teacher
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Subject { get; set; }
+        public double Salary { get; set; }
+        public override string ToString() => $"ID:{Id}, Name:{Name}, Subject:{Subject}, Salary:{Salary}";
+    }
+
+    class TeacherProgram
+    {
+        static List<Teacher> teachers = new();
+
+        static void Main()
+        {
+            int choice;
+            do
+            {
+                Console.WriteLine("\n1.QLGV  99.Thoat");
+                int.TryParse(Console.ReadLine(), out choice);
+                if (choice == 1) ManageTeachers();
+            } while (choice != 99);
+        }
+
+        static void ManageTeachers()
+        {
+            int c;
+            do
+            {
+                Console.WriteLine("\n1.Them 2.Xoa 3.CapNhat 4.HienThi 5.TimTen 6.Luong>10000000 7.SortTen 8.SortLuong 9.Back");
+                int.TryParse(Console.ReadLine(), out c);
+                switch (c)
+                {
+                    case 1:
+                        teachers.Add(new Teacher
+                        {
+                            Id = Input("ID:"),
+                            Name = Input("Ten:"),
+                            Subject = Input("Mon day:"),
+                            Salary = double.Parse(Input("Luong:"))
+                        });
+                        break;
+                    case 2:
+                        teachers.RemoveAll(t => t.Id == Input("Nhap ID can xoa:"));
+                        break;
+                    case 3:
+                        var id = Input("Nhap ID can cap nhat:");
+                        var gv = teachers.FirstOrDefault(t => t.Id == id);
+                        if (gv != null)
+                        {
+                            gv.Name = Input("Ten moi:");
+                            gv.Subject = Input("Mon day moi:");
+                            gv.Salary = double.Parse(Input("Luong moi:"));
+                        }
+                        break;
+                    case 4:
+                        teachers.ForEach(t => Console.WriteLine(t));
+                        break;
+                    case 5:
+                        var name = Input("Nhap ten:");
+                        teachers.Where(t => t.Name.Equals(name, StringComparison.OrdinalIgnoreCase))
+                                .ToList().ForEach(t => Console.WriteLine("Tim thay: " + t));
+                        break;
+                    case 6:
+                        teachers.Where(t => t.Salary > 10000000)
+                                .ToList().ForEach(t => Console.WriteLine("Luong cao: " + t));
+                        break;
+                    case 7:
+                        teachers = teachers.OrderBy(t => t.Name).ToList(); break;
+                    case 8:
+                        teachers = teachers.OrderByDescending(t => t.Salary).ToList(); break;
+                }
+            } while (c != 9);
+        }
+
+        static string Input(string msg) { Console.Write(msg); return Console.ReadLine(); }
+    }
+}
