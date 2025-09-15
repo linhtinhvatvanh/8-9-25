@@ -1,1 +1,81 @@
 test add file
+các thao tác
+1. Branch
+
+#1: them nhanh:
+#tạo nhánh mới rỗng: 
+git branch tên_nhánh_mới 
+#2. Merge
+#vừa thêm nhánh mời đồng thời gộp nhánh mới vào nhánh đích
+git checkout -b ten_nhanh ( o lenh nay giup tao nhanh moi va nhanh moi xe duoc vao luon nhanh đang đứng)
+#chuyển nhánh mới vào nhánh đích(gộp nhánh) : 
+git checkout tên_nhánh_mới_ cần_ chuyển
+#day len:  
+git push -u origin ten_nhanh
+#xoa nhanh: 
+git branch -d ten_nhanh_can_xoa ( lu y neu dang o nhanh do thi phai chuyen sang nhanh khac moi xoa duoc de chuyen nhanh: git checkout ten_nhanh_can_chuyen)
+#xoa tren git: git push origin --delete ten_nhanh_can_xoa
+kiemtra lai danh sach nhanh: git branch -a
+.
+3. Pull Request (PR) + Code Review
+
+👉 Cơ chế trên GitHub/GitLab/Bitbucket để xin merge nhánh vào nhánh chính (thường là develop hoặc main).
+
+Lập PR trên giao diện web.
+
+Người khác sẽ review code → comment → approve → merge.
+
+Ưu điểm: kiểm soát chất lượng code.
+
+4. Rebase
+
+👉 Dùng để làm lịch sử commit gọn gàng, thay vì merge.
+
+Ví dụ: muốn cập nhật nhánh feature/new-function theo develop mới nhất:
+
+git checkout feature/new-function
+git fetch origin
+git rebase origin/develop
+
+
+Sau đó push lại (thường phải --force):
+
+git push origin feature/new-function --force
+
+
+📌 Rebase thích hợp khi muốn commit history “thẳng hàng, sạch sẽ”.
+
+5. Cherry-pick
+
+👉 Dùng để lấy một commit cụ thể từ nhánh khác.
+
+Ví dụ: muốn lấy commit abc123 từ nhánh feature sang develop:
+
+git checkout develop
+git cherry-pick abc123
+
+
+Ứng dụng: lấy hotfix từ nhánh này sang nhánh khác mà không merge toàn bộ.
+
+6. Resolve conflict
+
+👉 Khi merge/rebase/cherry-pick, Git báo xung đột.
+
+Các bước:
+
+Mở file có conflict (Git đánh dấu bằng <<<<<<<, =======, >>>>>>>).
+
+Giữ lại code mong muốn → xóa phần thừa.
+
+Add file đã chỉnh sửa:
+
+git add conflicted_file.py
+
+
+Tiếp tục tiến trình:
+
+git merge --continue
+# hoặc
+git rebase --continue
+# hoặc
+git cherry-pick --continue
