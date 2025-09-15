@@ -1,0 +1,59 @@
+[33mcommit ea6ab3e7f9276852c4526538e06e77689d56781c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature01[m[33m, [m[1;31morigin/feature01[m[33m)[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 15 09:46:24 2025 +0700
+
+    add file vd03 into main
+
+[33mcommit bfd42faac7396c0d0d15f7e454eaa00cb363550b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 15 08:56:58 2025 +0700
+
+    refactor vd2 second time
+
+[33mcommit af03b7ada6c7c63b7af3aae3bfb0e41e823e2275[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 15 08:50:11 2025 +0700
+
+    fix student code on infor
+
+[33mcommit d97df21778529bc68d4276946ca04cd687c7ad92[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 15 08:03:11 2025 +0700
+
+    rename git_pracite to vd2
+
+[33mcommit 79472f91a51db20fa3a15851e369333a4ec656df[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 15 07:58:57 2025 +0700
+
+    update infor.txt
+
+[33mcommit dd6e75ab78099eddcb34ccfac9ac7a77e3240787[m
+Author: dtc21h4802010234-collab <dtc21h4802010234@ictu.edu.vn>
+Date:   Mon Sep 8 09:32:15 2025 +0700
+
+    Add files via upload
+
+[33mcommit 459482a316c2b20a215dcc54c5d1db247bd46e1a[m[33m ([m[1;31morigin/Vd2branch[m[33m, [m[1;32mVd2branch[m[33m)[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 8 08:15:24 2025 +0700
+
+     refactor file bad code Vd2.cs
+
+[33mcommit d2d05c3124a994ecc81e56f68e4da77e3defe0b0[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 8 08:09:44 2025 +0700
+
+    add git history.txt
+
+[33mcommit c84c1fd0fa3ff151c50dbd31512f0f3212b54974[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 8 07:58:22 2025 +0700
+
+    Add infor.txt
+
+[33mcommit 8487390b8c53748df93f5f5616f127e70dcbe00f[m
+Author: linhtinhvatvanh <linhnguyenthi0307@gmail.com>
+Date:   Mon Sep 8 07:30:56 2025 +0700
+
+    Add Vd2.Vd2cs
